@@ -1,0 +1,73 @@
+<html>
+  <head>
+    <link rel="stylesheet" href="css/all.min.css">
+    <link rel="stylesheet" href="css/bootstrap.min.css" />
+    <link rel="stylesheet" href="css/index_style.css" />
+  </head>
+  <body>
+
+    <div class="container w-75  shadow my-5 py-5 ">
+      <h1 >crud system</h1>
+      <label > Product Name:</label>
+      <input type="text" class="form-control" name="pname" id="pname">
+      
+      <div class="alert alert-danger d-none" id="nameAlert" role="alert">
+        <strong>please start with capital letter</strong>
+      </div>
+  
+      <label > Product Category:</label>
+      <input type="text" class="form-control" name="pcat" id="pcategory">
+      <div class="alert alert-danger d-none" id="categoryAlert" role="alert">
+        <strong>please start with capital letter</strong>
+      </div>
+
+
+      <label > Product Price:</label>
+      <input type="number" class="form-control" name="pprice" id="pprice">
+      <div class="alert alert-danger d-none" id="priceAlert" role="alert">
+        <strong>price is required</strong>
+      </div>
+  
+  
+      <label > Product Description:</label>
+      <textarea class="form-control mb-3" id="pdesc"></textarea>
+  
+  
+      <button id="addPro" class="btn btn-info">add product</button>
+      <button id="updatePro" class="btn btn-info" onclick="editData();">updata product</button>
+
+  
+   </div>
+
+
+
+
+   <input type="text" name="" id="searchWord" class="form-control w-75 m-auto mt-5" onkeyup="searchData();">
+
+  <div class="container mt-5">
+    <table class="table table-striped" >
+      <thead>
+        <tr>
+          <th>index</th>
+         <th>name</th>
+         <th>category</th>
+         <th>price</th>
+         <th>description</th>
+         <th>delete</th>
+         <th>update</th>
+        </tr>
+      </thead>
+      <tbody id="tbody">
+        
+      </tbody>
+    </table>
+   
+  </div>
+  
+
+    <script src="js/main.js"></script>
+    <script src="js/jquery-3.4.1.min.js"></script>
+    <script src="js/popper.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+  </body>
+</html>
